@@ -1,34 +1,54 @@
 # TSS
 TSS Windows CMD based Troubleshshooting script toolset 
 
-1.	Quick Overview of Troubleshooting script tss.cmd
+### 1.	Quick Overview of Troubleshooting script tss.cmd
 Purpose: Multi-purpose Troubleshooting tool to simplify just-in-time rapid data collection for standard and sporadic issues in in complex environments - or is to be considered as a convenient method for submitting and following easy action plans.
-Copy the tss_tools_*.zip file and expand it to local disk, i.e. into C:\tools folder; in some scenarios we need to find the additional tools either provided in zip or externally i.e. Sysinternals tools in the path, and the script adds PATH and searches in extracted C:\tools by default.
-Please start the script in the C:\tools folder in elevated CMD window.
-C:\tools>  tss [parameter list]
+Copy the _tss_tools_*.zip_ file and expand it to local disk, i.e. into _C:\tools_ folder; in some scenarios we need to find the additional tools either provided in zip or externally i.e. Sysinternals tools in the path, and the script adds PATH and searches in extracted C:\tools by default.
+
+Please start the script in the C:\tools folder in **elevated CMD window**.
+
+` C:\tools>  tss [parameter list] `
+
 Please invoke the tss command with necessary/appropriate parameters from here.
+
 If troubleshooting intermittent/long-term issues, please invoke the script and stop it later in elevated CMD with same Admin User account (because parameters are stored in user’s registry hive [HKCU\SOFTWARE\Microsoft\tss.cmd-state\*] )
 
 •	Tss.cmd is built on t.cmd and fully down-level compatible (accepts same parameters as t.cmd), and provides a Persistent switch to capture debug ETL, network sniff and ProcMon  data at boot time. (Example: tss.cmd CliOn Trace Persistent)
+
 •	For overview of possible command switches, run tss.cmd without any parameter; for full help, run ‘tss /help’
+
 •	The tss*.zip file contains additional binaries (*.exe, *.dll) and helper.cmd scripts needed for correct usage of some parameters, like WPR tracing, Procmon tracing, or purging older trace files.
+
 •	You can use On paramaters [clion][srvon][Ron] individually or in combination, but at least one of clion, srvon, Ron must be specified. 
+
 •	In typical reproduction scenarios you would start tracing, reproduce the problem, then stop tracing, Example:
-o	Start tracing: Tss Ron Trace Procmon PSR
+
+o	Start tracing: `Tss Ron Trace Procmon PSR`
+
 o	..Now reproduce problem scenario
-o	Stop tracing: Tss off
+
+o	Stop tracing: `Tss off`
+
 •	Most troubleshooting scenarios do not require any changes within the script itself, but you could adjust settings in the section 
-::::::: Configuration parameters, you can modify for your needs :::::::::
-Frequently used parameters are read in from configuration file tss_config.cfg, and editing this file is the preferred option when you need to change default parameters like _DirWork, which is the default location for resulting data set.
+
+`::::::: Configuration parameters, you can modify for your needs :::::::::`
+
+Frequently used parameters are read in from configuration file _tss_config.cfg_, and editing this file is the preferred option when you need to change default parameters like _DirWork, which is the default location for resulting data set.
+
 •	You can adjust additional scripts to run at start or stop time
+
 I.	Start of repro: tss_extra_repro_steps_AtStart.cmd
+
 II.	Before stopping repro:  tss_extra_repro_steps_AtStop.cmd
-III.	As a condition to stop tracing: tss_stop_condition_script.cmd to be leveraged by TSS switch stop:Cmd
+
+III.	As a condition to stop tracing: _tss_stop_condition_script.cmd_ to be leveraged by TSS switch `stop:Cmd`
+
 If you start the script without any parameters, you will see available options in the help menu:
-C:\tools> tss
-ERROR: operation mode must be specified
+` C:\tools> tss `
+```ERROR: operation mode must be specified
 
  Enabling Tracing:
+ 
   usage: tss [clion][srvon][Ron] + see below section [Ron] Options for predefined scenarios: - and [Ron] Additional options:
 
    At least one of CliOn, SrvOn, Ron (= ReproOn) must be specified.
@@ -137,11 +157,12 @@ verbose            	- verbose mode tracing flags (defined for fskm/mup srv)
   noSDP         - do not ask for SDP report, i.e. when using script in scheduled tasks
 
  Disabling and ReEnabling Tracing:
-  usage: tss snapshot [nocab] [nobin]
+  usage: tss snapshot [nocab] [nobin]```
   
 
-Predefined parameters in tss_config.cfg 
-@rem tss_config.cfg: CONFIGURE below variables for granular controlling TSS behaviour
+Predefined parameters in _tss_config.cfg_ 
+
+```@rem tss_config.cfg: CONFIGURE below variables for granular controlling TSS behaviour
 @rem Disk and folder path of data collection results, i.e. D:\MS_DATA - only use local disk!
 _DirWork=!SYSTEMDRIVE!\MS_DATA
 @
@@ -204,53 +225,55 @@ _noPSR=0
 @
 @rem To turn off GPresult logs in TS_Scenarios, set _noGPresult=1
 _noGPresult=0
-2.	Examples of frequently helpful built-in TS (troubleshooting) scenarios
+```
+
+### 2.	**Examples of frequently helpful built-in TS (troubleshooting) scenarios**
 TSS scenarios are predefined data collection sets, which include all necessary data like PSR, ProcMon, Perfmon or ETL tracing logs.
 All these predefined scenarios include network tracing/sniffing: 
 
 
 #1 Collect logs for UNC hardening issues, log on as local Admin, open elevated CMD window and run:
 (Scenario includes persistent Client SMB ETL-logs, Network Trace, Gpresult, GPsvc, Auth, Registry, Procmon, SDP)
-C:\tools> tss Clion Ron UNChard 
+` C:\tools> tss Clion Ron UNChard `
 
 #2 Collect Branchcache logs
 (Scenario includes Network Trace, PSR, Gpresult, Registry, Perfmon, SDP)
-C:\tools> tss Ron Branchcache
+` C:\tools> tss Ron Branchcache `
 
 #3 Collect DFS client logs
 (Scenario includes Network Trace, PSR, Gpresult, Procmon, SDP)
-C:\tools> tss CliOn Ron DFScli
+` C:\tools> tss CliOn Ron DFScli `
 
 #4 Collect DNS client logs
 (Scenario includes Network Trace, PSR, SDP)
-C:\tools> tss Ron DNScli
+` C:\tools> tss Ron DNScli `
 
 #5 Collect logs for SQLtracing
 (Scenario includes Network Trace, Perfmon)
-C:\tools> tss Ron SQLtrace
+ `C:\tools> tss Ron SQLtrace `
 
 #6 Collect logs for CSC Offline Files
 (Scenario includes Client SMB ETL-logs, Network Trace, Gpresult, Registry, PSR, Procmon, SDP)
-C:\tools> tss CliOn Ron CSC
+` C:\tools> tss CliOn Ron CSC `
 
 #7 Collect logs for Authentication provider
 (Scenario includes Client SMB, SSL,HTTPsys ETL-logs, Network Trace, Gpresult, Registry, PSR, Procmon, SDP)
-C:\tools> tss CliOn Ron Auth 
+` C:\tools> tss CliOn Ron Auth `
 
 #8 Collect logs for MS-cluster 
 (Scenario includes Network Trace, NetFT+LBFO+Cluster ETL, Storport, Perfmon, SDP)
-C:\tools> tss Ron MsCluster 
+` C:\tools> tss Ron MsCluster `
 
 #9 Collect logs for WebClient (similar to interactive WebClient SDP)
  (Scenario includes Network Trace, WebIO ETL, Proxy, PSR, Procmon, SDP, Advanced includes TTT/iDNA)
-C:\tools> tss CliOn Ron Webclient[:Adv] 
+` C:\tools> tss CliOn Ron Webclient[:Adv] `
 
 #10 DiskSpeed tests, for more info see 'tss /help'
-C:\tools> tss Ron DsR:D:1024:300:10G 
+` C:\tools> tss Ron DsR:D:1024:300:10G `
 
 Above commands will start the data collection and most will stop on predefined scenarios after hitting ANY-key.
 To stop data collection logging for non-predefined scenarios, run: 
-C:\tools> tss off
+ ` C:\tools> tss off` 
 ( if you use ‘tss off nocab’ the data in C:\MS_DATA\<date-time folder> will not be compressed; using noSDP will not ask for SDP report.)
 
 Some of the scenarios will ask for the SDP report to start run at the end of the data collection. 
@@ -260,17 +283,22 @@ Please upload the saved report manually onto MS workspace.
  
 
 TSS version 1.69 and later will invoke the already included PowerShell script based psSDP report, which runs on all OS versions, including Server core 2016. 
-More Examples: 
+
+**More Examples:**
+
 A)	You want to stop tracing based on a trigger Eventlog ID or some specific error entry in a log file for issues, which occur sporadically: use the Stop feature:
-Example: C:\tools> tss Ron traceChn:1 stop:Log 
+
+Example: ``` C:\tools> tss Ron traceChn:1 stop:Log 
 stop:Evt:ID:Eventlog - stop data collection on trigger Eventlog: choose either App or Sys, and EventID
 stop:Log[:pollInt] - stop data collection on trigger Logfile: optional PollIntervall-in-sec (def pollInt=10)
       Examples: stop:Evt:999:App =Stop on Event in Application Event log with Event ID# 999  (def: App:999 )
                          stop:Log:5 =Stop on Search-string entry in specific Log file, both to be defined within tss_TestLogFile.cfg
+```
 regarding second example, if you want to stop tracing based on a specific Windows Log entry, you can adjust the first two parameters in the file tss_TestLogFile.cfg, and optionally adjust 3rd parameter LogPollIntervalSec:
-	set StopSearchString=tss_test123
+```	set StopSearchString=tss_test123
 	set LogFilePath=!_MS_ScriptDir!\tss_StopTokenFile._tmp
 	set LogPollIntervalSec=8
+```
 Read the file tss_StopTokenFile._tmp for testing your config.
 
 B)	You want to run extra commands right after the script begins to start running?
@@ -286,10 +314,13 @@ No problem, just edit the included batch file tss_stop_condition_script.cmd and 
 
 
 When using the Persistent switch, the settings will be active after each reboot, unless you decide to remove it by running following command, when you are finished with all of your troubleshooting:
-C:\tools> Tss remove
+` C:\tools> Tss remove `
 
-Notes/hints: 
+**Notes/hints:**
 -	Some parameters are mutually exclusive: don’t combine [capture], [trace] or [traceChn]
+
 -	If you want to use the SDP switch with a specialty switch, just supply your SDP sceciality: 
 default SDP category= NET, choose [Net|Dom|CTS|Print|HyperV|Setup|Perf|Mini|Nano]
+
 -	In case of unforeseen errors, please be sure to stop tracing “tss off” before starting a new trace session. Also try “tss remove” if you can’t recover (new start of tss .. fails, stop command  tss off also fails)
+
