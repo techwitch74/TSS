@@ -288,13 +288,15 @@ TSS version 1.69 and later will invoke the already included PowerShell script ba
 
 A)	You want to stop tracing based on a trigger Eventlog ID or some specific error entry in a log file for issues, which occur sporadically: use the Stop feature:
 
-Example: ``` C:\tools> tss Ron traceChn:1 stop:Log 
-stop:Evt:ID:Eventlog - stop data collection on trigger Eventlog: choose either App or Sys, and EventID
+Example:  ` C:\tools> tss Ron traceChn:1 stop:Log `
+```stop:Evt:ID:Eventlog - stop data collection on trigger Eventlog: choose either App or Sys, and EventID
 stop:Log[:pollInt] - stop data collection on trigger Logfile: optional PollIntervall-in-sec (def pollInt=10)
       Examples: stop:Evt:999:App =Stop on Event in Application Event log with Event ID# 999  (def: App:999 )
                          stop:Log:5 =Stop on Search-string entry in specific Log file, both to be defined within tss_TestLogFile.cfg
 ```
+
 regarding second example, if you want to stop tracing based on a specific Windows Log entry, you can adjust the first two parameters in the file tss_TestLogFile.cfg, and optionally adjust 3rd parameter LogPollIntervalSec:
+
 ```	set StopSearchString=tss_test123
 	set LogFilePath=!_MS_ScriptDir!\tss_StopTokenFile._tmp
 	set LogPollIntervalSec=8
