@@ -234,18 +234,22 @@ All these predefined scenarios include network tracing/sniffing:
 
 #1 Collect logs for UNC hardening issues, log on as local Admin, open elevated CMD window and run:
 (Scenario includes persistent Client SMB ETL-logs, Network Trace, Gpresult, GPsvc, Auth, Registry, Procmon, SDP)
+
 ` C:\tools> tss Clion Ron UNChard `
 
 #2 Collect Branchcache logs
 (Scenario includes Network Trace, PSR, Gpresult, Registry, Perfmon, SDP)
+
 ` C:\tools> tss Ron Branchcache `
 
 #3 Collect DFS client logs
 (Scenario includes Network Trace, PSR, Gpresult, Procmon, SDP)
+
 ` C:\tools> tss CliOn Ron DFScli `
 
 #4 Collect DNS client logs
 (Scenario includes Network Trace, PSR, SDP)
+
 ` C:\tools> tss Ron DNScli `
 
 #5 Collect logs for SQLtracing
@@ -254,14 +258,17 @@ All these predefined scenarios include network tracing/sniffing:
 
 #6 Collect logs for CSC Offline Files
 (Scenario includes Client SMB ETL-logs, Network Trace, Gpresult, Registry, PSR, Procmon, SDP)
+
 ` C:\tools> tss CliOn Ron CSC `
 
 #7 Collect logs for Authentication provider
 (Scenario includes Client SMB, SSL,HTTPsys ETL-logs, Network Trace, Gpresult, Registry, PSR, Procmon, SDP)
+
 ` C:\tools> tss CliOn Ron Auth `
 
 #8 Collect logs for MS-cluster 
 (Scenario includes Network Trace, NetFT+LBFO+Cluster ETL, Storport, Perfmon, SDP)
+
 ` C:\tools> tss Ron MsCluster `
 
 #9 Collect logs for WebClient (similar to interactive WebClient SDP)
@@ -269,6 +276,7 @@ All these predefined scenarios include network tracing/sniffing:
 ` C:\tools> tss CliOn Ron Webclient[:Adv] `
 
 #10 DiskSpeed tests, for more info see 'tss /help'
+
 ` C:\tools> tss Ron DsR:D:1024:300:10G `
 
 Above commands will start the data collection and most will stop on predefined scenarios after hitting ANY-key.
@@ -316,6 +324,7 @@ No problem, just edit the included batch file tss_stop_condition_script.cmd and 
 
 
 When using the Persistent switch, the settings will be active after each reboot, unless you decide to remove it by running following command, when you are finished with all of your troubleshooting:
+
 ` C:\tools> Tss remove `
 
 **Notes/hints:**
@@ -324,5 +333,5 @@ When using the Persistent switch, the settings will be active after each reboot,
 -	If you want to use the SDP switch with a specialty switch, just supply your SDP sceciality: 
 default SDP category= NET, choose [Net|Dom|CTS|Print|HyperV|Setup|Perf|Mini|Nano]
 
--	In case of unforeseen errors, please be sure to stop tracing “tss off” before starting a new trace session. Also try “tss remove” if you can’t recover (new start of tss .. fails, stop command  tss off also fails)
+-	In case of unforeseen errors, please be sure to stop tracing **“tss off”** before starting a new trace session. Also try **“tss remove”** if you can’t recover (new start of tss .. fails, stop command  tss off also fails)
 
