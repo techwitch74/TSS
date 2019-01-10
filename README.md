@@ -2,9 +2,9 @@
 TSS Windows CMD based Troubleshshooting script toolset 
 
 ## Difference TSS and TSS ttt toolset
-If you don't need TTT/TTD/iDNA tracing, please download the smaller zip **tss_tools_v1.*.zip**.
+If you don't need TTT/TTD/iDNA tracing, please download the smaller zip **tss_tools_v1.*.zip**. (just click on the .zip file and then on [Download]) 
 
-If you need the package including the TTT/TTD/iDNA tracing, please download the bigger zip **tss_tools_ttt_v1.*.zip***.
+If you need the package including the TTT/TTD/iDNA tracing, please download the bigger zip **tss_tools_ttt_v1.*.zip**.
 
 ### 1.	Quick Overview of Troubleshooting script tss.cmd
 Purpose: Multi-purpose Troubleshooting tool to simplify just-in-time rapid data collection for standard and sporadic issues in in complex environments - or is to be considered as a convenient method for submitting and following easy action plans.
@@ -25,11 +25,11 @@ If troubleshooting intermittent/long-term issues, please invoke the script and s
 
 •	The tss*.zip file contains additional binaries (*.exe, *.dll) and helper.cmd scripts needed for correct usage of some parameters, like WPR tracing, Procmon tracing, or purging older trace files.
 
-•	You can use *On paramaters [clion][srvon][Ron] individually or in combination, but at least one of clion, srvon, Ron must be specified. 
+•	You can use *On paramaters [cliOn][srvon][rOn] individually or in combination, but at least one of cliOn, srvOn, rOn must be specified. 
 
 •	In typical reproduction scenarios you would start tracing, reproduce the problem, then stop tracing, Example:
 
-o	Start tracing: `Tss Ron Trace Procmon PSR`
+o	Start tracing: `Tss rOn Trace Procmon PSR`
 
 o	..Now reproduce problem scenario
 
@@ -59,7 +59,7 @@ If you start the script without any parameters, you will see available options i
  
   usage: tss [clion][srvon][Ron] + see below section [Ron] Options for predefined scenarios: - and [Ron] Additional options:
 
-   At least one of CliOn, SrvOn, Ron (= ReproOn) must be specified.
+   At least one of CliOn, SrvOn, rOn (= reproOn) must be specified.
  cliOn      - generate client component ETL-logs
  srvOn      - generate server component ETL-logs
  rOn        - collecting Repro data and logs
@@ -67,14 +67,7 @@ If you start the script without any parameters, you will see available options i
  Remove     - remove persistent network and ETL component tracing; cleanup Registry settings
  Query      - query active ms_* Data Collector Set (LOGMAN QUERY, LOGMAN QUERY -ets)
 
-  [for cliOn/srvOn  -only] Collection options:
-    capture    - [downlevel t.cmd] in combination with cliOn, srvOn: enable packet capture (Windows 7 / 2008 R2 or newer)
-    circ:N             - generate circular logs of size N megabytes (default circular buffer size is 250 MB per log)
-    cluster            - collect Cluster event logs
-    csv                - generate cluster CSV component traces
-    hyperv             - collect Hyper-V event logs
-    persistent         - choosen ETL-logs, NETSH traces or ProcMon will be activated only after next reboot
-  [rOn] Options for predefined Tss scenarios:
+ [rOn] Options for predefined Tss scenarios:
     Auth              -+ scenario: Authentication logs (Kerberos, NTLM, SSL, negoexts, pku2u, Http), network trace, Procmon, SDP
     Branchcache       -+ scenario: Branchcache+BITS logs, network trace, PSR, Perfmon:BC, SDP
     CSC               -+ scenario: OfflineFiles infos, CSC database dump, network trace, PSR, Procmon, SDP (tss cliOn Csc)
@@ -129,7 +122,7 @@ If you start the script without any parameters, you will see available options i
     ProcMon[:Boot|Purge:N] - collect ProcMon [Bootlog] trace, [Purge:N]: purge older *.pml files, keep number N [def:5]
     ProcTrack[:module|thread] - collect process tracking ETL, [Module: with Module load activity | Thread: with Thread+Module load activity]
     Proxy              - collect Proxy settings and related Registry settings
-    PSR[:maxsc]        - collect Problem Step Recorder (PSR) screenshots, [def: maxsc=99], starting timedate.cpl
+    PSR[:maxsc]        - default: collect Problem Step Recorder (PSR) screenshots, [def: maxsc=99], starting timedate.cpl
     RAS                - collect RAS ETL-log, includes VpnClient_dbg trace
     REG[:spec]         - collect Registry hives, spec: choose all|ATP|Auth|Branchcache|CSC|Firewall|Proxy|Rpc|tcp|UNChard|Webclient|VPN [def:all]
     Rpc                - collect RPC, RpcSs and DCOM ETL-log
@@ -153,7 +146,7 @@ If you start the script without any parameters, you will see available options i
     Video              - collect ScreenRecorder Video ~6 MB/min (requires Feature 'Desktop Experience' on server edition; needs DeCoder for viewing), starting timedate.cpl
     VPN                - collect VPN ETL data (includes AfdTcp) and network trace
     VSS                - collect Volume Shadow Copy Service (VSS) reports
-    WorkFolders[:Adv]  - collect WorkFolders infos, if Adv collect AdvancedMode with restart of service
+    WorkFolders[:Adv]  - collect WorkFolders infos on Srv and Client, if Adv collect AdvancedMode with restart of service, on WF server you should include Perfmon:CORE:5
     WebIO              - collect WinHttp, WinInet, WebIO ETL-log, i.e. for WebClient or Outlook
     WFP                - collect WFP Windows Filtering Platform, BFE (Base Filtering Engine), includes AfdTcp ETL-log
     Winsock            - collect Winsock ETL-log, includes NDIS, AfdTcp ETL-log
@@ -162,6 +155,13 @@ If you start the script without any parameters, you will see available options i
     WWAN               - collect WWAN ETL-log
     Xperf[:spec]       - collect Xperf trace, spec: choose General|SMB2 [def:General], alternatively: you may put your Xperf command into tss_extra_repro_steps_AtStart.cmd
 
+  [for cliOn/srvOn  -only] Collection options:
+    capture    - [downlevel t.cmd] in combination with cliOn, srvOn: enable packet capture (Windows 7 / 2008 R2 or newer)
+    circ:N             - generate circular logs of size N megabytes (default circular buffer size is 250 MB per log)
+    cluster            - collect Cluster event logs
+    csv                - generate cluster CSV component traces
+    hyperv             - collect Hyper-V event logs
+    persistent         - choosen ETL-logs, NETSH traces or ProcMon will be activated only after next reboot
 
  Disabling Tracing:
   usage: tss off [nocab] [nobin] [noSDP]
