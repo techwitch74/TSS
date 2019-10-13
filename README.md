@@ -1,8 +1,8 @@
-# IMPORTANT: Content MOVED!
+:star: # IMPORTANT: Content MOVED!
 `TSS Windows CMD based Troubleshshooting script toolset`
 
-The content of this site has moved and consolidated on:
+The content of this site has ben moved and consolidated on:
 
-https://github.com/CSS-Windows/WindowsDiag/tree/master/ALL/TSS
+:star: https://github.com/CSS-Windows/WindowsDiag/tree/master/ALL/TSS
 
-Please visit the **new website** to download the **latest** Windows Diag package
+Please visit the **new website** to download the **latest** Windows Diag packages
