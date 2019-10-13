@@ -1,4 +1,4 @@
-# IMPORTANT: Content MOVED!
+# IMPORTANT: Content MOVED! :star:
 `TSS Windows CMD based Troubleshshooting script toolset`
 
 The content of this site has ben moved and consolidated on:
