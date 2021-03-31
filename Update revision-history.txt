@@ -1,4 +1,5 @@
 **Revision History**
+::  2021.03.31.0 add SDP:RDS
 ::  2021.03.29.0 upd DirectAcccess DAcli; replace %_OSVER3% !_OSVER3!
 ::  2021.03.26.0 upd GetNetview
 ::  2021.03.23.0 upd tss_tools_TTT
