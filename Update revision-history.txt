@@ -1,5 +1,5 @@
 **Revision History**
-::  2021.04.01.0 upd xray 210401
+::  2021.04.01.1 upd xray 210401; add RNDIS
 ::  2021.03.31.0 add SDP:RDS
 ::  2021.03.29.0 upd DirectAcccess DAcli; replace %_OSVER3% !_OSVER3!
 ::  2021.03.26.0 upd GetNetview
