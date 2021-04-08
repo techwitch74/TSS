@@ -1,5 +1,5 @@
 **Revision History**
-::  2021.04.08.0 upd DHCPsrv
+::  2021.04.08.1 upd DHCPsrv; add FltMgr
 ::  2021.04.07.0 add IPhlpSvc
 ::  2021.04.06.0 changed scenarios RAS and VPN _TraceProv=provider={106B464D-8043-46B1-8CB8-E92A0CD7A560}, upd TaskSch, mod DHCPsrv audit log collection
 ::  2021.04.01.1 upd xray 210401; add RNDIS
