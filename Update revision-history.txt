@@ -1,4 +1,5 @@
 **Revision History**
+::  2021.04.15.0 fix priority Trace:N:Capture
 ::  2021.04.12.0 add Get-DnsServerResponseRateLimiting to DNSsrv; add SDP:SCCM
 ::  2021.04.08.1 upd DHCPsrv; add FltMgr
 ::  2021.04.07.0 add IPhlpSvc
