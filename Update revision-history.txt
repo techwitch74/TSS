@@ -1,4 +1,5 @@
 **Revision History**
+::  2021.04.19.0 mod SDP AlaysOnDiagScript.sql
 ::  2021.04.16.0 add {1701C7DC-045C-45C0-8CD6-4D42E3BBF387} to NCSI
 ::  2021.04.15.0 fix priority Trace:N:Capture
 ::  2021.04.12.0 add Get-DnsServerResponseRateLimiting to DNSsrv; add SDP:SCCM
