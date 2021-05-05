@@ -1,4 +1,5 @@
 **Revision History**
+::  2021.05.06.0 add ADFS
 ::  2021.05.03.0 upd iDNA
 ::  2021.04.30.0 add PerfLib and tss_Perf-Collect.ps1
 ::  2021.04.23.0 fix psSDP DC_HotfixRollup
