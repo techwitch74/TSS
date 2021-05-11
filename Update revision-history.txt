@@ -1,4 +1,5 @@
 **Revision History**
+::  2021.05.11.0 upd tssHelp, upd psSDP
 ::  2021.05.07.0 add mDNS to DNcli
 ::  2021.05.06.1 add ADFS scenario
 ::  2021.05.03.0 upd iDNA
