@@ -1,5 +1,7 @@
 **Revision History**
-::  2021.05.13.1 upd tss_GetBluetoothRadioInfo.ps1; add switch DataFolder
+::  2021.05.18.0 add QoS
+::  2021.05.17.0 upd psSDP
+::  2021.05.13.2 upd tss_GetBluetoothRadioInfo.ps1; add switch DataFolder
 ::  2021.05.11.0 upd tssHelp, upd psSDP
 ::  2021.05.07.0 add mDNS to DNScli
 ::  2021.05.06.1 add ADFS scenario
