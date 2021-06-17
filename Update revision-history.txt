@@ -1,4 +1,5 @@
 **Revision History**
+::  2021.06.18.0 upd xray 210616
 ::  2021.06.11.0 upd GetNetview
 ::  2021.06.09.0 upd psDDP; mod IPhlpSvc; mod SMBsrv/cli
 ::  2021.05.26.0 add GUID to NFSsrv
