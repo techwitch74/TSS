@@ -1,4 +1,6 @@
 **Revision History**
+::  2021.06.20.0 same helper-function names as in TSSv2
+::  2021.06.19.0 upd some trace GUIDs, upd Sysinternals binaries
 ::  2021.06.18.0 upd xray 210616
 ::  2021.06.11.0 upd GetNetview
 ::  2021.06.09.0 upd psDDP; mod IPhlpSvc; mod SMBsrv/cli
