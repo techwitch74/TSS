@@ -1,4 +1,7 @@
 **Revision History**
+::  2021.07.09.1 fix SDP SUVP issues; add Procmon /RingBufferSize 3096
+::  2021.07.08.0 upd SDP SUVP
+::  2021.07.01.0 upd Get-NetView, allow override with trace:<N>:scenario in scenarios with set _TraceScenario=scenario=...
 ::  2021.06.21.0 add CES Diagnostic Scripts and Utilities License 
 ::  2021.06.20.0 same helper-function names as in TSSv2
 ::  2021.06.19.0 upd some trace GUIDs, upd Sysinternals binaries
