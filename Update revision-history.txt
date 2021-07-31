@@ -1,5 +1,5 @@
 **Revision History**
-::  2021.07.30.0 upd Getetview
+::  2021.07.30.0 upd Get-Netview
 ::  2021.07.29.0 fixed WPRswitchStop=-skipPdbGen
 ::  2021.07.28.0 fixed stopping ETW sessions for RS1
 ::  2021.07.27.0 add WPRswitch=-filemode -recordTempTo
