@@ -1,4 +1,5 @@
 **Revision History**
+::  2021.08.02.0 unblock *.ps1 files
 ::  2021.07.30.0 upd Get-Netview
 ::  2021.07.29.0 fixed WPRswitchStop=-skipPdbGen
 ::  2021.07.28.0 fixed stopping ETW sessions for RS1
