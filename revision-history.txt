@@ -1,5 +1,8 @@
 **Revision History**
-::  2021.08.27.0 implement WFP as module, not scenario, for IKEEXT being in WFP.etl
+::  2021.09.01.0 adding WFP to scenarios which call WFPdiag
+::  2021.08.30.0 upd TssHelp.cmd re. IKEext
+::  2021.08.29.0 LKG=v2021.08.25.0, upd Sysinternals
+::  2021.08.27.1 implement WFP as module, not scenario, for IKEEXT being in WFP.etl, correct DHCPsrv logs
 ::  2021.08.25.0 IKEext output depending on start ORDER
 ::  2021.08.20.0 fix WPR -boottrace on Srv2016
 ::  2021.08.19.0 fix Procmon Ringbuffer by not invoking /LoadConfig
