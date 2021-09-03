@@ -1,4 +1,5 @@
 **Revision History**
+::  2021.09.03.0 add GPTextDebugLevel to GPedit
 ::  2021.09.01.1 mod NTFS; fix WFP; adding WFP to scenarios which call WFPdiag
 ::  2021.08.30.0 upd TssHelp.cmd re. IKEext
 ::  2021.08.29.0 LKG=v2021.08.25.0, upd Sysinternals
