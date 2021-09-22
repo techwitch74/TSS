@@ -1,4 +1,5 @@
 **Revision History**
+::  2021.09.22.0 adjusting release# due to TssV2 changes
 ::  2021.09.16.0 running 'netsh trace stop' async
 ::  2021.09.14.0 correct location of tss_extra_repro_steps_AtStart
 ::  2021.09.10.0 add "Security" to SCM logs
