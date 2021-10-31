@@ -1,4 +1,5 @@
 **Revision History**
+::  2021.10.28.0 fix DNSsrv:verbose
 ::  2021.10.26.0 add _noEvtSec
 ::  2021.10.20.0 upd Get-Netview
 ::  2021.10.17.1 upd Sysinternals tools
