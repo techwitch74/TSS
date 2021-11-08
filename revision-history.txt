@@ -1,4 +1,6 @@
 **Revision History**
+::  2021.11.07.0  avoid TestConn_TLS.html
+::  2021.11.02.0 VeryFirstDummyNetSH to CheckDisclaimer, upd TTT
 ::  2021.10.28.0 fix DNSsrv:verbose
 ::  2021.10.26.0 add _noEvtSec
 ::  2021.10.20.0 upd Get-Netview
