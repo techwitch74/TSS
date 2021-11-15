@@ -1,5 +1,6 @@
 **Revision History**
-::  2021.11.10.0 upd psSDP
+::  2021.11.15.0 upd xray 211112, upd psSDP privateCloud
+::  2021.11.10.0 upd psSDP for PowerShell 7
 ::  2021.11.09.0 fix WaitonTime
 ::  2021.11.07.0  avoid TestConn_TLS.html
 ::  2021.11.02.0 VeryFirstDummyNetSH to CheckDisclaimer, upd TTT
