@@ -1,4 +1,5 @@
 **Revision History**
+::  2021.11.19.0 add RASdialer,MediaManager,VPNplugin GUIDs to RasMan
 ::  2021.11.17.1 psSDP with signed *.vbs; check for unsigned/tampered *.VBS
 ::  2021.11.15.0 upd xray 211112, upd psSDP privateCloud
 ::  2021.11.10.0 upd psSDP for PowerShell 7
