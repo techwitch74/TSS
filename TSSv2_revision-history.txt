@@ -1,0 +1,9 @@
+**TSSv2 Revision History** (https://aka.ms/getTSSv2)
+
+::   2021.12.01.0 [we] _NET: add NET_Auth scenario
+::   2021.11.29.0 [we] _NET: add RAS -Mode Hang
+::   _FW:  add option -Mode Hang, add check $noUpdate for online check; add switches -noPerfMon, -noNetsh, -noXperf, -noWPR (could be necessary avoiding PerfMon issues on localized OS); adding PerfMon '\Process V2' counters for Win11
+::     moving NET_ADcore, NET_ADsam, NET_BadPwd, NET_DFSR, NET_LDAPsrv, NET_LockOut to ADS
+:: 	   moving NET_CSVspace, NET_MPIO, NET_msDSM to SHA
+::   2021.11.25.2 [we] _FW: automated public online version checking
+  
