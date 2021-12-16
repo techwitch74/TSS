@@ -1,5 +1,10 @@
 **TSSv2 Revision History** (https://aka.ms/getTSSv2)
 
+::   2021.12.16.2 [we] _NET: workaround for #362
+::    _FW added help: -WaitEvent Evt:<EventID>:<Eventlog Name>[:<CheckIntInSec>:<StopWaitTimeInSec>:<StopEventData>:<EvtDataPartial>:<OR|AND>]
+:: 		add Function RunAdminCheck, fix #355; change "Reproduce the issue and enter 'Y' key .." to avoid stopping immediatelly when user entered Y<RETURN> for PSR/Video
+:: 		replaced some Read-Host with CHOICE
+:: 		update Sysinternals binaries
 ::   2021.12.12.1 [rh] _FW: add -NetshMaxSize and more no* switches
 ::   2021.12.09.1 [we] _SHA: fix SHA_SDDC; 
 ::    _FW: don't run AutoUpdate, $Xray = $True => always run xray
