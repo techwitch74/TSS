@@ -1,4 +1,6 @@
 **TSSv1 Revision History**
+::  2022.01.04.0 update FSLogix
+::  2021.12.30.0 add getCertsInfo to SMBcli
 ::  2021.12.16.2 update Sysinternals binaries 
 ::  2021.11.19.0 add RASdialer,MediaManager,VPNplugin GUIDs to RasMan
 ::  2021.11.17.1 psSDP with signed *.vbs; check for unsigned/tampered *.VBS
