@@ -1,4 +1,5 @@
 **TSSv1 Revision History**
+::  2022.01.05.1 upd WebClient RegKeys
 ::  2022.01.04.0 update FSLogix
 ::  2021.12.30.0 add getCertsInfo to SMBcli
 ::  2021.12.16.2 update Sysinternals binaries 
