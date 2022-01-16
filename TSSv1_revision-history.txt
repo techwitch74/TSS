@@ -1,4 +1,6 @@
 **TSSv1 Revision History**
+::  2022.01.16.0 add Rd-RDS-MAN-Broker to RDSsrv
+::  2022.01.14.0 upd psSDP (TS_MCAlite, DC_Trustinfo)
 ::  2022.01.13.0 upd VPN client; upd RDSsrv/RDScli, fix Reg-Outputs
 ::  2022.01.10.0 add Netsetup
 ::  2022.01.07.0 upd xray
