@@ -1,4 +1,6 @@
 **TSSv1 Revision History**
+::  2022.01.22.0 upd psSDP
+::  2022.01.17.0 add Video to BC
 ::  2022.01.16.0 add Rd-RDS-MAN-Broker to RDSsrv
 ::  2022.01.14.0 upd psSDP (TS_MCAlite, DC_Trustinfo)
 ::  2022.01.13.0 upd VPN client; upd RDSsrv/RDScli, fix Reg-Outputs
