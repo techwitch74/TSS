@@ -1,4 +1,5 @@
 **TSSv1 Revision History**
+::  2022.01.25.0 upd WinNAT
 ::  2022.01.22.0 upd psSDP
 ::  2022.01.17.0 add Video to BC
 ::  2022.01.16.0 add Rd-RDS-MAN-Broker to RDSsrv
